@@ -3,12 +3,12 @@ import discord
 from discord.ext import tasks, commands
 import datetime
 import asyncio
-from flask import Flask
-from threading import Thread
+from dotenv import load_dotenv
 
 bot = commands.Bot(intents=discord.Intents.all(), command_prefix='a!')
 bot.remove_command('help')
 suimin = 949560203886604293
+load_dotenv()
 token = os.environ['token']
 @bot.event
 async def on_ready():
